@@ -5,11 +5,7 @@ import { View } from "react-native";
 
 // ====== AUTORYZACJA ======
 import { auth } from "../../../firebase";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 
 // ====== NATIVE BASE ======
 import {
@@ -30,33 +26,25 @@ import {
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userInfo, setUserInfo] = useState(null);
 
   // Sprawdzanie czy użytkownik jest zautoryzowany
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigation.replace("HomeStackScreen");
+        navigation.replace("UserDrawerScreen", { user: userInfo });
       }
     });
     return unsubscribe;
   }, []);
-
-  // Rejestracja
-  const handleRegister = () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user.email);
-      })
-      .catch((error) => alert(error.message));
-  };
 
   // Logowanie
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("Logged in with: ", user.email);
+        setUserInfo(user);
+        console.log("[AUTH] Logged in with: ", user.email);
       })
       .catch((error) => alert(error.message));
   };

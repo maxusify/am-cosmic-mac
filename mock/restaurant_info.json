@@ -1,0 +1,39 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "city": "Elbląg",
+      "address": "ul. Rakowska 17",
+      "longitude": 19.443078,
+      "latitude": 54.149109
+    },
+    {
+      "id": 2,
+      "city": "Kielce",
+      "address": "ul. Zagórska 35",
+      "longitude": 20.646778,
+      "latitude": 54.149109
+    },
+    {
+      "id": 3,
+      "city": "Kielce",
+      "address": "ul. Mała 21",
+      "longitude": 20.629231,
+      "latitude": 50.870057
+    },
+    {
+      "id": 4,
+      "city": "Olsztyn",
+      "address": "ul. Hugona Kollataja 23",
+      "longitude": 20.475028,
+      "latitude": 53.776188
+    },
+    {
+      "id": 5,
+      "city": "Gliwice",
+      "address": "ul. Oriona 1",
+      "longitude": 18.659291,
+      "latitude": 50.32463
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "cart": [
+    {
+      "name": "CosmicBurger",
+      "price": 24.99,
+      "quantity": 1,
+      "desc": "Flagowa kanapka naszej sieci restauracji."
+    },
+    {
+      "name": "CosmicCola",
+      "price": 6.99,
+      "quantity": 1,
+      "desc": "Orzeźwia jak żadna inna."
+    },
+    {
+      "name": "CosmicFries",
+      "price": 8.99,
+      "quantity": 1,
+      "desc": "Kosmicznie smaczne frytki."
+    }
+  ]
+}
