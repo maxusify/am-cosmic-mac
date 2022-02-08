@@ -3,7 +3,7 @@ import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { NativeBaseProvider, Text, View } from "native-base";
 
-export default function Home({ navigation }) {
+export default function Profile({ navigation }) {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
@@ -15,7 +15,7 @@ export default function Home({ navigation }) {
   return (
     <NativeBaseProvider>
       <View>
-        <Text>Strona Główna</Text>
+        <Text>Profile</Text>
       </View>
     </NativeBaseProvider>
   );
